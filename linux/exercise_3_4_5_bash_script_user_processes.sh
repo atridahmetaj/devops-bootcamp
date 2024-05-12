@@ -11,7 +11,7 @@ then
   ps u -U "$user" --sort -rss | head -n $(("$linesNumber" + 1))
 elif [ "$sort" = "c" ]
 then
-        ps u -U "$user" --sort -%cpu | head -n $(("$linesNumber" + 1))
+  ps u -U "$user" --sort -%cpu | head -n $(("$linesNumber" + 1))
 else
   echo "Please choose sorting method. Exiting!"
 fi
